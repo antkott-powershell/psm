@@ -1,7 +1,7 @@
-# Module PowerShell SMUA - common functions
-# Put in C:\Program Files\WindowsPowerShell\Modules\smua-common\
+# Module PowerShell  - common functions
+# Put in C:\Program Files\WindowsPowerShell\Modules\<module name>\
 ##############################
-$moduleVer="1.6 #01.06.17 by Anton V. Kotlyarenko"
+$moduleVer="1.0  by Anton V. Kotliarenko"
 $moduleNameShort="antkott-common"
 $moduleName="Module PowerShell antkott - common functions"
 
@@ -349,7 +349,7 @@ function Start-CommonHeaderForScript($ProgrammName,$ver,$scriptPath){
 
 function Exit-CommonHeaderForScript($exitCode){ 
     $script:stopTime=Get-Date
-    $timeScriptWorking=New-TimeSpan –Start $startTime –End $stopTime
+    $timeScriptWorking=New-TimeSpan Â–Start $startTime Â–End $stopTime
        
     Write-log ""
     Write-log ""
@@ -397,7 +397,7 @@ function Clear-BeforeExit ($CounterDayScriptGarbageDelete){
     }
 }
 
-$global:SmtpServer="10.1.1.76"
+$global:SmtpServer="smtprelay"
 $global:SmtpPort=25
 
 function Send-Mail{    
